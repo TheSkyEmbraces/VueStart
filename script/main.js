@@ -30,3 +30,22 @@ const classApp = new Vue({
         ]
     }
 })
+
+const classApp1 = new Vue({
+    el:'.app1',
+    data:{
+        message:"메시지가 뒤집힌다니깐?!"
+    },
+    methods:{
+        reverseMessage:function(){
+            this.message = this.message.split('').reverse().join('');
+        }
+    }
+})
+
+const clasApp2 = new Vue({
+    el:'.app2',
+    data:{
+        message:"텍스트가 바뀐다니까?!"
+    }
+})

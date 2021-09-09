@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue 연습하기</title>
 </head>
+
 <body>
     <div id="app">
         {{message}}
@@ -31,6 +33,16 @@
                 {{todo.text}}
             </li>
         </ol>
+    </div>
+
+    <div class="app1">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">글자가 뒤집힐껄요?</button>
+    </div>
+
+    <div class="app2">
+        <div>{{message}}</div>
+        <input type="text" v-model="message">
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
