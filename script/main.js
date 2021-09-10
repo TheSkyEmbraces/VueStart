@@ -49,3 +49,12 @@ const clasApp2 = new Vue({
         message:"텍스트가 바뀐다니까?!"
     }
 })
+
+
+Vue.component('todo-item', {
+    template:'<li> 할일 01 </li>'
+})
+
+var classApp3 = new Vue({
+    el:'.app4'
+})
