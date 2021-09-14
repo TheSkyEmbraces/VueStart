@@ -12,7 +12,7 @@
 <body>
     <div class="root">
         <div>끝말잇기를 시작해 봅시다</div>
-        <div>{{word}}</div>
+        <div>단어 : {{word}}</div>
         <form action="" v-on:submit="onSubmitForm">
             <input type="text" v-model="value" ref="answer">
             <button>입니다.</button>
@@ -26,7 +26,7 @@
         const app = new Vue({
             el: '.root',
             data: {
-                word: '사과',
+                word: '끝말잇기',
                 value: '',
                 result: ''
             },
@@ -34,10 +34,10 @@
                 onSubmitForm(event) {
                     event.preventDefault(); // preventDefault = Form 태그 안의 a태그나 submit을 눌렀을때 새로고침을 방지해주는 함수
                     if (this.word[this.word.length - 1] === this.value[0]) {
-                        this.result = "정답입니다";
+                        this.result = "정답입니다 똑똑하시네요";
                         this.word = this.value;
                     } else {
-                        this.result = "틀렸습니다만?";
+                        this.result = "틀렸습니다만? 다시 도전하세요";
                     };
                     this.value = '';
                     this.$refs.answer.focus();
